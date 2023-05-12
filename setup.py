@@ -1,3 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-setup()
+setup(
+    name="OTVision",
+    version="0.0.1",
+    description="OTVision Repro",
+    packages=find_packages()
+)
