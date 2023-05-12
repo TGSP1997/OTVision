@@ -4,5 +4,5 @@ setup(
     name="OTVision",
     version="0.0.1",
     description="OTVision Repro",
-    packages=find_packages(exclude=["tests"])
+    packages=find_packages()
 )
