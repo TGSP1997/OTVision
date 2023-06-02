@@ -179,7 +179,10 @@ class Splitter:
 class DetectionParser:
     def convert(self, data_detections: list[dict[str, str]]) -> list[Detection]:
         detections: list[Detection] = []
+        allowed_classes = ["car","motorcycle","bus","train","truck"]
         for detection in data_detections:
+            if detection['class'] not in allowed_classes:
+                continue
             detected_item = Detection(
                 detection[CLASS],
                 float(detection[CONFIDENCE]),
